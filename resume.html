@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Shubham Yadav</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide scrollbars */
+            background-color: black;
+        }
+
+        .download-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff004f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s ease;
+        } 
+
+        .download-btn:hover {
+            background-color: #d6004c; 
+        }
+
+        .resume-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .resume-pdf {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Download link -->
+    <a href="resume.pdf" download="Shubham_Yadav_Resume.pdf" class="download-btn">Download Resume</a>
+
+    <!-- Display your resume PDF -->
+    <div class="resume-container">
+        <iframe src="resume.pdf" class="resume-pdf"></iframe>
+    </div>
+</body>
+</html>

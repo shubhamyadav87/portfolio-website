@@ -1,0 +1,518 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    /* flex-wrap: nowrap; Prevent wrapping */
+    overflow: hidden; /* Ensure content does not overflow */
+    position: relative; /* For absolute positioning of the sidebar */
+    background-color: #000; /* Background color for navbar */
+}
+
+.navbar-logo {
+    flex-shrink: 0; /* Allow the logo to shrink */
+}
+
+.navbar-logo img {
+    height: 40px; /* Adjust logo size if needed */
+    max-width: 100%; /* Ensure logo does not exceed available space */
+}
+
+.navbar-items {
+    display: flex;
+    list-style-type: none;
+    flex-grow: 1; /* Allow items to take available space */
+    justify-content: flex-end; /* Align items to the right */
+    transition: transform 0.3s ease, max-height 0.3s ease;
+}
+
+.navbar-items li {
+    margin-right: 15px;
+    position: relative; /* For positioning the line */
+}
+
+.navbar-items a {
+    text-decoration: none;
+    color: white; /* Text color for normal state */
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.navbar-items a::after {
+    content: '';
+    display: block;
+    height: 2px; /* Height of the line */
+    width: 0; /* Initial width */
+    background: #ff004f; /* Line color */
+    transition: width 0.3s ease; /* Smooth transition for width */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.navbar-items a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* Menu icon styles */
+.menu-icon {
+  position: fixed; /* Fixed position to stay at top right */
+  top: 20px; /* Adjust top position as needed */
+  right: 20px; /* Adjust right position as needed */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.menu-icon img {
+  height: 30px; /* Adjust icon size as needed */
+  width: auto;
+  filter: invert(1); /* Invert color for better visibility on dark backgrounds */
+  cursor: pointer;
+}
+
+/* Sidebar styles */
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -3000px; /* Initially hide sidebar off-screen */
+  width: 250px;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #000; /* Sidebar background color */
+  transition: right 0.3s ease; /* Smooth slide transition */
+  z-index: 1100; /* Ensure sidebar overlays content */
+  padding-top: 80px; /* Padding for items to avoid overlapping with navbar */
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1); /* Box shadow for sidebar */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center; /* Center align sidebar items */
+}
+
+.sidebar li {
+  margin-bottom: 10px; /* Space between sidebar items */
+  position: relative;
+  padding: 30px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.sidebar a:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+/* Sidebar open state */
+.sidebar-open {
+  right: 0;
+  
+}
+
+/* Line transition styles */
+.sidebar li::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ff004f;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.sidebar li:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 80%;
+      max-width: 300px;
+  }
+  .sidebar-transparent {
+    opacity: 0.7; /* Adjust opacity value as needed */
+}
+}
+
+@media (min-width: 769px) {
+  .menu-icon {
+      display: none;
+  }
+}
+
+.header-text {
+    margin-top: 8%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+span {
+    color: #ff004f;
+}
+
+.bg-upper-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    width: 100%;
+    margin-top: 1px;
+}
+
+.bg-upper-img {
+    width: 250px; /* Adjust the size as needed */
+    height: 250px; /* Ensure height matches width */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* About Us Page Styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    text-align: center; /* Center text in smaller screens */
+}
+
+.left .header-text {
+    text-align: left; /* Reset text alignment */
+    list-style: none;
+    font-size: x-large; 
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust spacing */
+}
+
+.bg-main-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bg-main-img {
+    width: 60%; /* Ensure image spans the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border: none; /* Remove any border */
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right {
+        order: -1; /* Move .right section above .left in column layout */
+    }
+}
+
+.resume-btn {
+    background-color: white;
+    color: black;
+    margin-top: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.resume-btn:hover {
+    background-color: #ff004f;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Skills section styles */
+.skills-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.skills-section h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  color: #ff004f;
+  margin-left: 3%;
+}
+
+.skills-section h2:hover {
+  background-color: black;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, background-color 0.3s; /* Smooth transition */
+}
+
+.skills-section h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px; /* Change this to adjust the thickness of the line */
+  background: #ff004f;
+  transition: width 0.3s;
+  position: absolute;
+  left: -15px;
+  bottom: -5px; /* Adjust this to position the line closer or further away from the text */
+}
+
+.skills-section h2:hover::after {
+  width: 100%;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.skill {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: calc(25% - 40px); /* Initial width for desktop view */
+    text-align: center;
+    overflow: hidden;
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.skill:hover {
+    background-color: #ff004f;
+    transform: scale(1.05);
+    transition: background-color 0.6s ease;
+}
+
+
+/* Media query for screens less than 768px */
+@media (max-width: 767px) {
+    .skills-container {
+        flex-direction: column; /* Display skills in a single column */
+        align-items: center; /* Center align items */
+    }
+
+    .skill {
+        width: 60%; /* Ensure each skill takes full width */
+    }
+}
+
+/* Projects Section Styles */
+.projects-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ff004f;
+}
+
+.project-heading {
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.project-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    background-color: transparent; /* Initial color */
+}
+
+.project-heading:hover::after {
+    background-color: #ff004f; /* Color on hover */
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #ff004f;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px; /* Set a maximum width for the projects grid */
+    margin: 0 auto; /* Center align the projects grid */
+}
+
+.project-card {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: calc(33.33% - 40px); /* Adjust width to fit three cards in a row */
+    text-align: center;
+    overflow: hidden; 
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-card img {
+    width: 100%;
+    height: 70%; /* Adjust height as needed */
+    object-fit: cover; /* Ensure the image covers the container */
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.project-links a {
+    background-color: #ff004f;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.practise-project-links {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    margin-top: 25px;
+}
+
+.practise-project-links a {
+    background-color: #ff004f;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensure links behave as blocks */
+    margin: 0 5px; /* Add margin to separate links */
+}
+
+.practise-project-links a:hover {
+    background-color: #e60045;
+}
+
+.project-links a:hover {
+    background-color: #e60045;
+}
+
+.hidden {
+    display: none;
+}
+
+.project-card:hover {
+    background-color: #ff004f;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 40px); /* Adjust width for two cards in a row */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: calc(100% - 40px); /* Adjust width for one card in a row */
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-items {
+        flex-direction: column;
+        position: fixed; /* Fixed positioning for sidebar */
+        top: 0;
+        left: -250px; /* Hide the sidebar initially */
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 250px;
+        height: 100vh;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .navbar-items.active {
+        left: 0; /* Slide the sidebar into view */
+    }
+
+    .navbar-items li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,272 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #000;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  height: 40px;
+  max-width: 100%;
+}
+
+.navbar-items {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  transition: transform 0.3s ease, max-height 0.3s ease;
+}
+
+.navbar-items li {
+  margin-right: 15px;
+  position: relative;
+}
+
+.navbar-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.navbar-items a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #ff004f;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.navbar-items a:hover::after {
+  width: 100%;
+}
+
+/* Menu icon styles */
+.menu-icon {
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 1000;
+}
+
+.menu-icon img {
+height: 30px;
+width: auto;
+filter: invert(1);
+cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+position: fixed;
+top: 0;
+right: -300px;
+width: 250px;
+height: 100vh;
+background-color: #000;
+transition: right 0.3s ease;
+z-index: 1100;
+padding-top: 80px;
+box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+list-style-type: none;
+padding: 0;
+text-align: center;
+}
+
+.sidebar li {
+margin-bottom: 10px;
+position: relative;
+padding: 30px;
+}
+
+.sidebar a {
+display: block;
+color: white;
+text-decoration: none;
+padding: 10px 20px;
+transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+background-color: #333;
+}
+
+.sidebar-open {
+right: 0;
+}
+
+.sidebar li::before {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+background-color: #ff004f;
+bottom: -5px;
+left: 50%;
+transform: translateX(-50%);
+transition: width 0.3s ease;
+}
+
+.sidebar li:hover::before {
+width: 100%;
+}
+
+@media (max-width: 768px) {
+.sidebar {
+    width: 80%;
+    max-width: 300px;
+}
+}
+
+@media (min-width: 769px) {
+.menu-icon {
+    display: none;
+}
+}
+
+/* Contact container styles */
+.contact-container {
+
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.welcome-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff004f;
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: center; /* Center the label text */
+}
+
+.input-group input,
+.input-group textarea {
+    width: 80%; /* Set width to 60% */
+    margin: 0 auto; /* Center the input fields and textarea */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    display: block; /* Ensure input and textarea are block elements */
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #ff004f;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff004f;
+}
+
+/* Social links styles */
+.social-links {
+  margin-top: 20px;
+  text-align: center; /* Center the social links */
+}
+
+.social-links h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff004f;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between icons */
+  margin-top: 40px; /* Adjust margin for spacing */
+}
+
+.icons a {
+  font-size: 2rem; /* Adjust icon size */
+  color: #ffffff; /* White color */
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #ff004f; /* Change color on hover */
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-items {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 250px;
+      height: 100vh;
+      padding-top: 80px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+  }
+  .navbar-items li {
+      margin-bottom: 20px;
+  }
+  .navbar-items.open {
+      left: 0;
+  }
+}

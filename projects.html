@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Student Portfolio - Projects</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="navbar-logo">
+            <img src="logo.png" alt="logo" class="logo">
+        </div>
+        <!-- Navbar items -->
+        <ul class="navbar-items" id="navbar-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Sidebar -->
+     <!-- Menu Icon -->
+     <div class="menu-icon" id="menu-icon">
+        <img src="menu.png" alt="Menu">
+    </div>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <h1 class="project-heading">Main Projects</h1>
+        <div class="projects-grid">
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/True-Frame" data-live="https://true-frame.streamlit.app/">
+                <img src="projects/image classification.jpg" alt="Project 1">
+                <p>True-Frame: Real and Fake Image Classifier</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/True-Frame" class="github-link" target="_blank">GitHub</a>
+                    <a href="https://true-frame.streamlit.app/" class="live-link" target="_blank">Live Application</a>
+                </div>
+            </div>
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/Dibatese-Prediction_model" data-live="https://dibatese-prediction-model.streamlit.app/">
+                <img src="projects/multiple-disease.jpg" alt="Project 2">
+                <p>MediGuardian: Multiple Disease Predictor</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/Dibatese-Prediction_model" class="github-link" target="_blank">GitHub</a>
+                    <a href="https://dibatese-prediction-model.streamlit.app/" class="live-link" target="_blank">Live Application</a>
+                </div>
+            </div>
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/Diabetes-Prediction_model" data-live="https://diabetes-prediction-model.streamlit.app/">
+                <img src="projects/Diabetes-prediction.jpg" alt="Project 3">
+                <p>Diabetes-Prediction Model</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/Diabetes-Prediction_model" class="github-link" target="_blank">GitHub</a>
+                    <a href="https://diabetes-prediction-model.streamlit.app/" class="live-link" target="_blank">Live Application</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="project-heading">Practice Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/NumNet">
+                <img src="projects/MNIST.png" alt="MNIST Classification">
+                <p>NumNet: Anchoring Digit Recognition</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/NumNet" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/CoutureNet">
+                <img src="projects/Fashion_mnist.png" alt="Fashion MNIST Classification">
+                <p>CoutureNet: Navigating Fashion Labels</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/CoutureNet" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/GrapeGuardian">
+                <img src="projects/wine_quality.jpg" alt="Wine Quality Prediction">
+                <p>GrapeGuardian: Illuminating Wine Quality Through Data</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/GrapeGuardian" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/VitalSignsAI">
+                <img src="projects/Heart_disease.jpg" alt="Heart Disease Prediction">
+                <p>VitalSignsAI: Decoding Heart Health Patterns</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/VitalSignsAI" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/ThyroidSculpt">
+                <img src="projects/Thyroid_prediction.png" alt="Thyroid Prediction">
+                <p>ThyroidSculpt: Shaping Strategies for Early Detection</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/ThyroidSculpt" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project-card" data-github="https://github.com/shubhamyadav87/ChurnWhisperer">
+                <img src="projects/Customer_churn.jpg" alt="Customer Churn Prediction">
+                <p>ChurnWhisperer: Unveiling Patterns That Predict Customer Departures</p>
+                <div class="project-links hidden">
+                    <a href="https://github.com/shubhamyadav87/ChurnWhisperer" class="github-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <script>// Select all project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            // Loop through each project card
+            projectCards.forEach(card => {
+                // Add click event listener to each card
+                card.addEventListener('click', () => {
+                    // Toggle the visibility of project links within the clicked card
+                    const projectLinks = card.querySelector('.project-links');
+                    projectLinks.classList.toggle('hidden');
+                });
+            });
+            </script>
+    </section>
+
+</body>
+</html>
