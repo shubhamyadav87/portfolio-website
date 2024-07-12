@@ -399,7 +399,7 @@ span {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     max-width: 1200px; /* Set a maximum width for the projects grid */
     margin: 0 auto; /* Center align the projects grid */
 }
