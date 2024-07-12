@@ -405,7 +405,7 @@ span {
 }
 
 .project-card {
-    background-color: #444;
+    background-color: #000;
     color: white;
     padding: 20px;
     margin: 10px;
@@ -469,9 +469,9 @@ span {
     background-color: #e60045;
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 .project-card:hover {
     background-color: #ff004f;
