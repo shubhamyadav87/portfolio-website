@@ -39,6 +39,39 @@
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <script>// JavaScript for toggling sidebar open/close
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const sidebar = document.getElementById('sidebar');
+    const navbarItems = document.getElementById('navbar-items');
+
+    // Show menu icon on smaller screens
+    if (window.innerWidth <= 768) {
+        menuIcon.style.display = 'block';
+    }
+
+    // Toggle sidebar open/close
+    menuIcon.addEventListener('click', function() {
+        sidebar.classList.toggle('sidebar-open');
+    });
+
+    // Close sidebar when a link is clicked (for smaller screens)
+    navbarItems.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.remove('sidebar-open');
+        }
+    });
+
+    // Adjust sidebar open/close on window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            sidebar.classList.remove('sidebar-open');
+            menuIcon.style.display = 'none';
+        } else {
+            menuIcon.style.display = 'block';
+        }
+    });
+});</script>
     </div>
 
 
