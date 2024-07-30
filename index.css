@@ -181,12 +181,12 @@ span {
     color: #ff004f;
 }
 
-#dynamic-text {
+/* #dynamic-text {
     display: inline-block;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     color: #ff004f;
-}
+} */
 
 .bg-upper-img-container {
     display: flex;
@@ -488,13 +488,20 @@ span {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .project-card {
-        width: calc(50% - 40px); /* Adjust width for two cards in a row */
+        width: calc(70%); /* Adjust width for two cards in a row */
+        height: calc(400px);
+        
     }
+    .project-links{
+        margin-top: 20px;
+    }
+    
 }
 
 @media (max-width: 480px) {
     .project-card {
-        width: calc(100% - 40px); /* Adjust width for one card in a row */
+        width: calc(100%); /* Adjust width for one card in a row */
+        height: calc(400px);
     }
 }
 
