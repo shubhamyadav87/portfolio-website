@@ -12,19 +12,19 @@
     
     <!-- Navbar -->
     <nav class="navbar">
-    <!-- Logo -->
-    <div class="navbar-logo">
-        <img src="logo.png" alt="logo" class="logo">
-    </div>
-    <!-- Navbar items container -->
-    <ul class="navbar-items" id="navbar-items">
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Skills">Skills</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
-    </ul>
-</nav>
+        <!-- Logo -->
+        <div class="navbar-logo">
+            <img src="logo.png" alt="logo" class="logo">
+        </div>
+        <!-- Navbar items -->
+        <ul class="navbar-items" id="navbar-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Sidebar -->
      <!-- Menu Icon -->
@@ -32,12 +32,12 @@
         <img src="menu.png" alt="Menu">
     </div>
     <div class="sidebar" id="sidebar">
-        <ul class="navbar-items" id="navbar-items">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 
@@ -48,218 +48,5 @@
     <div class="header-text">
         <h1>Hi, I'm <span>Shubham Yadav</span><br>A<br><span id="dynamic-text"></span><br> Enthusiast</h1>
     </div>
-    
-    <!-- About Us Content -->
-    <section class="about-us-section">
-        <div class="container">
-            <div class="left">
-                <div class="header-text">
-                    <h1>Hello, <span>Welcome</span><br><br></h1>
-                    <h2>I’m <span>Shubham</span> Yadav<br><br></h2>
-                    <p>A dedicated student passionate about Data-Science, skilled in Python, statistics, and machine learning. I excel in solving complex data problems and am eager to contribute innovative solutions through analytical insights.</p>
-                    <button class="resume-btn" onclick="openResume()">Resume</button>
-                </div>
-            </div>
-            <div class="right">
-                <div class="bg-main-img-container">
-                    <img class="bg-main-img no-border" src="main photo.png" alt="Shubham Yadav">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Skills-Section -->
-    <section class="skills-section">
-        <h2>My Skills ⚡</h2>
-        <div class="skills-container">
-            <div class="skill" onclick="openWiki('Python')">
-                <img src="skills logo/python.png" alt="Python">
-                <p>Python</p>
-            </div>
-            <div class="skill" onclick="openWiki('SQL')">
-                <img src="skills logo/sql-server.png" alt="SQL">
-                <p>SQL</p>
-            </div>
-            <div class="skill" onclick="openWiki('Java')">
-                <img src="skills logo/java.png" alt="Java">
-                <p>Java</p>
-            </div>
-            <div class="skill" onclick="openWiki('C++')">
-                <img src="skills logo/c++.png" alt="C++">
-                <p>C++</p>
-            </div>
-            <div class="skill" onclick="openWiki('Machine_Learning')">
-                <img src="skills logo/machine learning.png" alt="Machine Learning">
-                <p>Machine Learning</p>
-            </div>
-            <div class="skill" onclick="openWiki('Deep_Learning')">
-                <img src="skills logo/deep-learning.png" alt="Deep Learning">
-                <p>Deep Learning</p>
-            </div>
-            <div class="skill" onclick="openWiki('Power_BI')">
-                <img src="skills logo/icons8-power-bi-48.png" alt="Power BI">
-                <p>Power BI</p>
-            </div>
-            <div class="skill" onclick="openWiki('GitHub')">
-                <img src="skills logo/github.png" alt="GitHub">
-                <p>GitHub</p>
-            </div>
-            <!-- <div class="skill" onclick="openWiki('Nodejs')">
-                <img src="skills logo/nodejs.png" alt="Nodejs">
-                <p>Node.js</p>
-            </div> -->
-            <div class="skill" onclick="openWiki('Streamlit')">
-                <img src="skills logo/Streamlit.png" alt="Streamlit">
-                <p>Streamlit</p>
-            </div>
-            <!-- <div class="skill" onclick="openWiki('Flask')">
-                <img src="skills logo/flask.png" alt="Flask">
-                <p>Flask</p>
-            </div> -->
-            <div class="skill" onclick="openWiki('MongoDB')">
-                <img src="skills logo/icons8-mongo-db-48.png" alt="MongoDB">
-                <p>MongoDB</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <h1 class="project-heading">Main Projects</h1>
-        <div class="projects-grid">
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/True-Frame" data-live="https://true-frame.streamlit.app/">
-                <img src="projects/image classification.jpg" alt="Project 1">
-                <p>True-Frame: Real and Fake Image Classifier</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/True-Frame" class="github-link" target="_blank">GitHub</a>
-                    <a href="https://true-frame.streamlit.app/" class="live-link" target="_blank">Live</a>
-                </div>
-            </div>
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/Dibatese-Prediction_model" data-live="https://dibatese-prediction-model.streamlit.app/">
-                <img src="projects/multiple-disease.jpg" alt="Project 2">
-                <p>MediGuardian: Multiple Disease Predictor</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/Dibatese-Prediction_model" class="github-link" target="_blank">GitHub</a>
-                    <a href="https://dibatese-prediction-model.streamlit.app/" class="live-link" target="_blank">Live</a>
-                </div>
-            </div>
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/Diabetes-Prediction_model" data-live="https://diabetes-prediction-model.streamlit.app/">
-                <img src="projects/Diabetes-prediction.jpg" alt="Project 3">
-                <p>Diabetes-Prediction Model</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/Diabetes-Prediction_model" class="github-link" target="_blank">GitHub</a>
-                    <a href="https://diabetes-prediction-model.streamlit.app/" class="live-link" target="_blank">Live</a>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="project-heading">Practice Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/NumNet">
-                <img src="projects/MNIST.png" alt="MNIST Classification">
-                <p>NumNet: Anchoring Digit Recognition</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/NumNet" class="github-link" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/CoutureNet">
-                <img src="projects/Fashion_mnist.png" alt="Fashion MNIST Classification">
-                <p>CoutureNet: Navigating Fashion Labels</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/CoutureNet" class="github-link" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/GrapeGuardian">
-                <img src="projects/wine_quality.jpg" alt="Wine Quality Prediction">
-                <p>GrapeGuardian: Illuminating Wine Quality Through Data</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/GrapeGuardian" class="github-link" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/VitalSignsAI">
-                <img src="projects/Heart_disease.jpg" alt="Heart Disease Prediction">
-                <p>VitalSignsAI: Decoding Heart Health Patterns</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/VitalSignsAI" class="github-link" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/ThyroidSculpt">
-                <img src="projects/Thyroid_prediction.png" alt="Thyroid Prediction">
-                <p>ThyroidSculpt: Shaping Strategies for Early Detection</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/ThyroidSculpt" class="github-link" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project-card" data-github="https://github.com/shubhamyadav87/ChurnWhisperer">
-                <img src="projects/Customer_churn.jpg" alt="Customer Churn Prediction">
-                <p>ChurnWhisperer: Unveiling Patterns That Predict Customer Departures</p>
-                <div class="project-links hidden">
-                    <a href="https://github.com/shubhamyadav87/ChurnWhisperer" class="github-link" target="_blank">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <script>// Select all project cards
-            const projectCards = document.querySelectorAll('.project-card');
-            
-            // Loop through each project card
-            projectCards.forEach(card => {
-                // Add click event listener to each card
-                card.addEventListener('click', () => {
-                    // Toggle the visibility of project links within the clicked card
-                    const projectLinks = card.querySelector('.project-links');
-                    projectLinks.classList.toggle('hidden');
-                });
-            });
-            </script>
-    </section>
-
-    <div class="contact-container">
-        <div class="welcome-text">
-            <h1>Welcome to Our Contact Page</h1>
-            <p><i>Have questions or want to work together? Send a message, and I'll get back to you as soon as possible.</i></p>
-        </div>
-        <div class="contact-form">
-            <form>
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="input-group">
-                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="phone"><i class="fas fa-phone"></i> Mobile Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="input-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-        <div class="social-links">
-            <h2>Follow Us</h2>
-            <div class="icons">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fa fa-twitter-square"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const menuIcon = document.getElementById('menu-icon');
-        const sidebar = document.getElementById('sidebar');
-    
-        menuIcon.addEventListener('click', function () {
-            sidebar.classList.toggle('sidebar-open');
-        });
-    });
-    </script>
 </body>
 </html>
