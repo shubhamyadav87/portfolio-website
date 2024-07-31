@@ -181,12 +181,12 @@ span {
     color: #ff004f;
 }
 
-/* #dynamic-text {
+#dynamic-text {
     display: inline-block;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     color: #ff004f;
-} */
+}
 
 .bg-upper-img-container {
     display: flex;
