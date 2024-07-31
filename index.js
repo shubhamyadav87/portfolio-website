@@ -30,6 +30,30 @@ document.addEventListener('DOMContentLoaded', function() {
             menuIcon.style.display = 'block';
         }
     });
+    // Dynamic text functionality
+    const words = ["Data-Science", "Artificial-Intelligence", "Machine-learning", "Deep-learning", "Software-Developer"];
+    let index = 0;
+    const dynamicTextElement = document.getElementById("dynamic-text");
+
+    // Initial text
+    dynamicTextElement.textContent = words[index];
+
+    function changeText() {
+        // Start fading out the text
+        dynamicTextElement.style.opacity = 0;
+
+        // Change text after the fade-out transition
+        setTimeout(() => {
+            index = (index + 1) % words.length; // Cycle through words
+            dynamicTextElement.textContent = words[index];
+
+            // Fade back in
+            dynamicTextElement.style.opacity = 1;
+        }, 500); // Delay to match the CSS transition duration
+    }
+
+    // Set up the interval to call changeText every 3 seconds
+    setInterval(changeText, 3500);
 });
 
 const menuIcon = document.getElementById('menu-icon');
