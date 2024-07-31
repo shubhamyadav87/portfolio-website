@@ -189,7 +189,7 @@ width: 100%;
 
 .input-group input,
 .input-group textarea {
-    width: 80%; /* Set width to 60% */
+    width: 40%; /* Set width to 60% */
     margin: 0 auto; /* Center the input fields and textarea */
     padding: 10px;
     border: 1px solid #ddd;
