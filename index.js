@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.classList.remove('sidebar-open');
         }
     });
-
+    
     // Adjust sidebar open/close on window resize
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
@@ -30,7 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
             menuIcon.style.display = 'block';
         }
     });
-    // Dynamic text functionality
+});
+
+const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+         });
+
+document.addEventListener('DOMContentLoaded', function () {
+        // Dynamic text functionality
     const words = ["Data-Science", "Artificial-Intelligence", "Machine-learning", "Deep-learning", "Software-Developer"];
     let index = 0;
     const dynamicTextElement = document.getElementById("dynamic-text");
@@ -53,17 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Set up the interval to call changeText every 3 seconds
-    setInterval(changeText, 3500);
+    setInterval(changeText, 3500); // Total time should be the interval + transition duration (3000ms + 500ms)
 });
-
-const menuIcon = document.getElementById('menu-icon');
-        const sidebar = document.getElementById('sidebar');
-
-        menuIcon.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
-         });
-
-
 function openResume() {
     window.open("resume.html", "_blank");
 }
