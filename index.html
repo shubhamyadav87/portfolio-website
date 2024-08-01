@@ -5,75 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="index.js"></script>
     <title>Student Portfolio</title>
 </head>
 <body>
     
-    <!-- Navbar -->
-    <nav class="navbar">
-        <!-- Logo -->
-        <div class="navbar-logo">
-            <img src="logo.png" alt="logo" class="logo">
-        </div>
-        <!-- Navbar items -->
-        <ul class="navbar-items" id="navbar-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Sidebar -->
-     <!-- Menu Icon -->
-     <div class="menu-icon" id="menu-icon">
-        <img src="menu.png" alt="Menu">
+<!-- Navbar -->
+<nav class="navbar">
+    <!-- Logo -->
+    <div class="navbar-logo">
+        <img src="logo.png" alt="logo" class="logo">
     </div>
-    <div class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
+    <!-- Navbar items -->
+    <ul class="navbar-items" id="navbar-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-   <!-- Header text -->
-    <div class="bg-upper-img-container">
-        <img src="avatar.png" alt="Background Upper Image" class="bg-upper-img">
-    </div>
-    <div class="header-text">
-        <h1>Hi, I'm <span>Shubham Yadav</span><br>A<br><span id="dynamic-text"></span><br> Enthusiast</h1>
-    </div>
-     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const words = ["Data-Science", "Artificial-Intelligence", "Machine-learning", "Deep-learning", "Software-Developer"];
-            let index = 0;
-            const dynamicTextElement = document.getElementById("dynamic-text");
+<!-- Sidebar -->
+<!-- Menu Icon -->
+<div class="menu-icon" id="menu-icon">
+    <img src="menu.png" alt="Menu">
+</div>
+<div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
 
-            // Initial text
-            dynamicTextElement.textContent = words[index];
+<!-- Header text -->
+<div class="bg-upper-img-container">
+    <img src="avatar.png" alt="Background Upper Image" class="bg-upper-img">
+</div>
+<div class="header-text">
+    <h1>Hi, I'm <span>Shubham Yadav</span><br>A<br><span id="dynamic-text"></span><br> Enthusiast</h1>
+</div>
 
-            function changeText() {
-                // Start fading out the text
-                dynamicTextElement.style.opacity = 0;
+<!-- Social Links -->
+<div class="icons">
+    <a href="https://github.com/shubhamyadav87" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/07XShubham" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/shubham-yadav-364185208/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://instagram.com/09_.shubham._" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
 
-                // Change text after the fade-out transition
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const words = ["Data-Science", "Artificial-Intelligence", "Machine-learning", "Deep-learning", "Software-Developer"];
+        let index = 0;
+        const dynamicTextElement = document.getElementById("dynamic-text");
+
+        function createLetterSpans(word) {
+            return word.split('').map(letter => `<span>${letter}</span>`).join('');
+        }
+
+        function changeText() {
+            dynamicTextElement.innerHTML = createLetterSpans(words[index]);
+            const spans = dynamicTextElement.querySelectorAll('span');
+
+            spans.forEach((span, i) => {
                 setTimeout(() => {
-                    index = (index + 1) % words.length; // Cycle through words
-                    dynamicTextElement.textContent = words[index];
+                    span.classList.add('fade-in');
+                }, i * 100); // Adjust the delay for each letter
+            });
 
-                    // Fade back in
-                    dynamicTextElement.style.opacity = 1;
-                }, 500); // Delay to match the CSS transition duration
-            }
+            setTimeout(() => {
+                spans.forEach((span, i) => {
+                    setTimeout(() => {
+                        span.classList.remove('fade-in');
+                        span.classList.add('fade-out');
+                    }, (spans.length - 1 - i) * 100); // Adjust the delay for each letter (back to front)
+                });
 
-            // Set up the interval to call changeText every 3 seconds
-            setInterval(changeText, 3500); // Total time should be the interval + transition duration (3000ms + 500ms)
-        });
-    </script>
+                setTimeout(() => {
+                    index = (index + 1) % words.length;
+                    changeText();
+                }, spans.length * 100); // Delay before starting the next word
+            }, spans.length * 100 + 1000); // Duration the word is visible + 1 second
+        }
+
+        changeText();
+    });
+</script>
 </body>
 </html>
